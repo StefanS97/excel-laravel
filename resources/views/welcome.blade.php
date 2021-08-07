@@ -25,7 +25,16 @@
         <div class="container">
             <div class="row pt-5">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-title py-3">
+                        <a href="{{ route('export') }}" class="btn btn-primary">Export</a>
+                        <hr>
+                        <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <input type="file" name="file" required>
+                            <input type="submit" name="Submit" class="btn btn-warning text-white">
+                        </form>
+                    </div>
+                    <div class="card-text">
                         <table class="table">
                             <thead>
                                 <tr>

@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [UserController::class, 'index']);
+Route::get('/', [UserController::class, 'index'])->name('index');
+Route::get('/export', [UserController::class, 'export'])->name('export');
+Route::post('/import', [UserController::class, 'import'])->name('import');
