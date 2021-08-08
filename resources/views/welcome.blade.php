@@ -33,6 +33,8 @@
                             <input type="file" name="file" required>
                             <input type="submit" name="Submit" class="btn btn-warning text-white">
                         </form>
+                        <hr>
+                        <a href="{{ route('pdf') }}" class="btn btn-danger text-white">Get as PDF</a>
                     </div>
                     <div class="card-text">
                         <table class="table">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\UserExport;
 use App\Imports\UserImport;
 use App\Models\User;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -35,5 +36,12 @@ class UserController extends Controller
             ]);
         }
         return redirect()->route('index');
+    }
+
+    public function pdf()
+    {
+        $pdf= PDF::loadView('welcome', ['users' => User::all()])->setOptions(['defaultFont' => 'sans-serif']);
+
+        return $pdf->download('users.pdf');
     }
 }

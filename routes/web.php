@@ -15,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [UserController::class, 'index'])->name('index');
+
+// Excel routes
 Route::get('/export', [UserController::class, 'export'])->name('export');
 Route::post('/import', [UserController::class, 'import'])->name('import');
+
+// PDF route
+Route::get('pdf', [UserController::class, 'pdf'])->name('pdf');

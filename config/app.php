@@ -165,6 +165,9 @@ return [
         // Excel-Laravel
         Maatwebsite\Excel\ExcelServiceProvider::class,
 
+        // PDF-Laravel
+        Barryvdh\DomPDF\ServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -234,6 +237,9 @@ return [
 
         // Excel-Laravel
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+
+        // PDF-Laravel
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 
